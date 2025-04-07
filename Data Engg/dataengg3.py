@@ -9,7 +9,7 @@ df = pd.read_csv('over_features.csv')
 # Choose features to investigate
 features = ['over', 'number_of_wickets_lost', 'required_desired_run_rate', 'dot_ball_pressure']
 
-# Iterate over each pair of features and create hexbin plots for each wicket outcome
+# Iterate over each pair of features
 for feat1, feat2 in itertools.combinations(features, 2):
     fig, ax = plt.subplots(1, 2, figsize=(14, 6), sharex=True, sharey=True)
     

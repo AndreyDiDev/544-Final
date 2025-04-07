@@ -14,7 +14,7 @@ df['aggressiveness_index'] = df['striker_strike_rate'] * (df['striker_boundaries
 # List of new features to visualize
 new_features = ['pressure_index', 'wicket_pressure', 'late_over_flag', 'bowler_pressure', 'aggressiveness_index']
 
-# Plot the distribution of each new feature by wicket_next_over, save and display the plot
+# Plot the distribution of each new feature by wicket_next_over
 for feature in new_features:
     fig, ax = plt.subplots(figsize=(8, 5))
     for wicket in [0, 1]:

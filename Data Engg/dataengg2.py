@@ -2,14 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import itertools
 
-# Load the dataset (assuming it's already loaded as df)
-df = pd.read_csv('Data engg/over_features.csv')
+df = pd.read_csv('over_features.csv')
 
 # Choose a set of features to investigate.
-# You can modify this list to include different combinations.
 features = ['over', 'number_of_wickets_lost', 'required_desired_run_rate', 'dot_ball_pressure']
 
-# Generate scatter plots for each pair of features.
+# Generate scatter plots
 for feat1, feat2 in itertools.combinations(features, 2):
     plt.figure(figsize=(8, 6))
     # Plot data points for each value of wicket_next_over (0 and 1)
@@ -28,7 +26,7 @@ wicket_counts = df['wicket_next_over'].value_counts()
 print("Distribution of wicket_next_over:")
 print(wicket_counts)
 
-# Plot the distribution using matplotlib
+# Plot the distribution
 import matplotlib.pyplot as plt
 
 plt.figure(figsize=(6,4))
